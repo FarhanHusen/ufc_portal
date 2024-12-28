@@ -1,0 +1,71 @@
+/* about.css */
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Section Header */
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Team Section */
+.team-section {
+    padding: 3rem 0;
+    margin-top: 100px; /* Memberi jarak antara header dan konten */
+}
+
+.team-member {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+/* Image Styling */
+.team-member img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #666;
+}
+
+/* Coach Name */
+.team-member h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.team-member p {
+    color: #666;
+}
+
+/* Social Links */
+.social-links a {
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}

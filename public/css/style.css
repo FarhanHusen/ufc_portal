@@ -1,0 +1,65 @@
+/* Style untuk header */
+.header-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/page-imgs/header.jpg") no-repeat center center/cover; /* Gradasi warna */
+    padding: 60px 20px; /* Ruang di sekitar teks */
+    text-align: center; /* Teks di tengah */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Inner header */
+.inner-header {
+    position: relative;
+    z-index: 2;
+}
+
+/* Style untuk headline */
+.head-line {
+    font-family: "Roboto", sans-serif; /* Font headline */
+    font-size: 50px; /* Ukuran font utama */
+    color: #ffffff;
+    letter-spacing: 3px; /* Jarak antar huruf */
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Animasi teks untuk highlight */
+.highlight {
+    font-weight: 900;
+    color: #ff0000; /* Warna emas */
+    animation: pulse 2s infinite; /* Animasi berdenyut */
+}
+
+.sub-title {
+    font-weight: 500;
+    color: #ff0000;
+    font-size: 50px;
+}
+
+/* Style untuk sub-headline */
+.sub-headline {
+    font-size: 18px;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+/* Keyframes untuk animasi */
+@keyframes pulse {
+    0%,
+    100% {
+        text-shadow: 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff;
+    }
+    50% {
+        text-shadow: 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 30px #ffffff;
+    }
+}
+
+@keyframes backgroundMove {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
