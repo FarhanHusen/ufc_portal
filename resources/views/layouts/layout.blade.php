@@ -93,13 +93,13 @@
 
         <nav class="nav-bar2">
           <ul>
-            <li class="nav-items dropdown">
+            {{-- <li class="nav-items dropdown">
               <a href="#" class="nav-link">Player Performance</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Individual Player Stats</a></li>
                 <li><a class="dropdown-item" href="#">Health & Physiotherapy</a></li>
               </ul>
-            </li>
+            </li> --}}
             <li class="nav-items dropdown">
               <a href="#" class="nav-link">REGISTRASI ACADEMY</a>
               <ul class="dropdown-menu">

@@ -8,6 +8,6 @@ class UserController extends Controller
 {
     public function dashboard()
     {
-        return view('user.dashboard'); // Ganti dengan tampilan pengguna biasa
+        return view('user.user'); // Ganti dengan tampilan pengguna biasa
     }
 }
