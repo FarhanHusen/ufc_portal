@@ -23,7 +23,7 @@ Route::get('/jadwal_latihan', function () {
     return view('jadwal');
 });
 Route::get('/individual', function () {
-    return view('user.individual');
+    return view('layouts.user.individual');
 });
 
 Route::get('/pemain', [PemainController::class, 'pemain'])->name('pemain');
@@ -53,7 +53,4 @@ Route::middleware('auth')->group(function () {
     Route::get('/pelatihadmin', [PelatihController::class, 'index'])->name('pelatih.index');
     Route::post('/pelatihadmin', [PelatihController::class, 'store'])->name('pelatih.store');
 
-    Route::get('/user', function () {
-        return view('user.user');  // Memanggil file index.blade.php di folder resources/views
-    });
 });

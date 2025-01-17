@@ -18,7 +18,7 @@
                         <!-- tabs -->
                         <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
                             <li class="nav-item me-2" role="presentation">
-                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#"
                                     type="button" role="tab" aria-controls="home" aria-selected="true">
                                     Log In
                                 </button>
@@ -282,7 +282,7 @@
         <!--/ Principles section -->
 
         <!-- our players section -->
-        <section class="our-players" data-aos="">
+        <section class="our-players">
             <div class="player-slide-parent">
                 <div class="players-headline">
                     <h3 class="text-uppercase"><b class="fw-bolder"></b></h3>

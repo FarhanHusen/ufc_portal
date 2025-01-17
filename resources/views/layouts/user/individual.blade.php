@@ -238,7 +238,7 @@
         <div class="footer">
             &copy; MaguwoharjoFootballPark | Designed with <i class="fas fa-heart"></i> by MFPAcademy2024
         </div>
-        <a href="/user" class="btn-back-to-user btn btn-warning">
+        <a href="/user/dashboard" class="btn-back-to-user btn btn-warning">
             <i class="fas fa-arrow-left"></i> Kembali
         </a>
     </div>
