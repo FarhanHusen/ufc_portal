@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         // Pengguna Admin
         DB::table('users')->insert([
-            'name' => 'Admin User',
+            'name' => 'Admin',
             'email' => 'admin@example.com',
             'password' => Hash::make('adminpassword'), // Pastikan ini adalah password yang aman
             'role' => 'admin',
@@ -27,12 +27,14 @@ class DatabaseSeeder extends Seeder
 
         // Pengguna Biasa
         DB::table('users')->insert([
-            'name' => 'Regular User',
+            'name' => 'User',
             'email' => 'user@example.com',
             'password' => Hash::make('userpassword'),
             'role' => 'user',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
+
+        $this->call(HealthAssessmentSeeder::class);
     }
 }

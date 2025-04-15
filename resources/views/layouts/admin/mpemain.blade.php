@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.layout')
 
 @section('content')
     <div class="container">
@@ -11,8 +11,8 @@
             </div>
         @endif
 
-        <!-- Form Input Pelatih -->
-        <form action="{{ route('pelatih.store') }}" method="POST" enctype="multipart/form-data">
+        <!-- Form Input Pemain -->
+        <form action="{{ route('pemain.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="name">Nama Pemain</label>
@@ -30,26 +30,26 @@
             </div>
 
             <div class="form-group">
-                <label for="photo">Foto Pelatih</label>
+                <label for="photo">Foto Pemain</label>
                 <input type="file" class="form-control" id="photo" name="photo" accept="image/*" required>
             </div>
 
             <button type="submit" class="btn btn-primary mt-3">Simpan</button>
         </form>
 
-        <!-- Tabel Daftar Pelatih -->
+        <!-- Tabel Daftar Pemain -->
         <table class="table mt-4">
             <thead>
                 <tr>
                     <th>No</th>
                     <th>Nama Pemain</th>
-                    <th>Posisis</th>
+                    <th>Posisi</th>
                     <th>Deskripsi</th>
                     <th>Foto</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($pelatih as $item)
+                @foreach ($pemain as $item)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $item->name }}</td>
@@ -57,7 +57,7 @@
                         <td>{{ $item->description }}</td>
                         <td>
                             @if ($item->photo)
-                                <img src="{{ asset('storage/' . $item->photo) }}" alt="Foto Pelatih" width="100">
+                                <img src="{{ asset('storage/' . $item->photo) }}" alt="Foto Pemain" width="100">
                             @else
                                 Tidak ada foto
                             @endif

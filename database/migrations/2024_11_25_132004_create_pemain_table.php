@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePemainsTable extends Migration
+class CreatePemainTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreatePemainsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pemains', function (Blueprint $table) {
+        Schema::create('pemain', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_pemain');
-            $table->string('password');
+            $table->string('name');
+            $table->string('position');
+            $table->text('description');
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreatePemainsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pemains');
+        Schema::dropIfExists('pemain');
     }
 }

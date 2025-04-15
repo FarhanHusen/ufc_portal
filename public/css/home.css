@@ -1015,9 +1015,18 @@ Reuseable main btns
     background-color: #fff;
 }
 
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
 .card:hover {
-    transform: translateY(-10px); /* Angkat kartu saat hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.badge {
+    font-size: 0.9rem;
+    padding: 0.5em 0.75em;
 }
 
 /* Header card */
@@ -1107,3 +1116,4 @@ Reuseable main btns
         font-size: 0.9rem;
     }
 }
+

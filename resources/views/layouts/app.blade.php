@@ -37,7 +37,7 @@
             <hr class="sidebar-divider my-0" />
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="{{ request()->routeIs('admin.dashboard') ? 'nav-item active' : 'nav-item' }}">
                 <a class="nav-link" href="{{ route('admin.dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -50,44 +50,80 @@
             <div class="sidebar-heading">Interface</div>
 
             <!-- Nav Items -->
-            <li class="nav-item">
+            @can('isadmin')
+            <li class="{{ request()->routeIs('admin.akun') ? 'nav-item active' : 'nav-item' }}">
                 <a class="nav-link" href="{{ route('admin.akun') }}">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Akun Pemain</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="{{ request()->routeIs('pelatih.index') ? 'nav-item active' : 'nav-item' }}">
                 <a class="nav-link" href="{{ route('pelatih.index') }}">
                     <i class="fas fa-fw fa-user-tie"></i>
                     <span>Manajemen Pelatih</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('pelatih.index') }}">
+            <li class="{{ request()->routeIs('pemain.index') ? 'nav-item active' : 'nav-item' }}">
+                <a class="nav-link" href="{{ route('pemain.index') }}">
                     <i class="fas fa-fw fa-user-tie"></i>
                     <span>Manajemen Pemain</span>
                 </a>
             </li>
+            <li class="{{ request()->routeIs('layouts.user.editable') ? 'nav-item active' : 'nav-item' }}">
+                <a class="nav-link" href="{{ route('layouts.user.editable') }}">
+                    <i class="fas fa-fw fa-receipt"></i>
+                    <span>Editable Player</span>
+                </a>
+            </li>
+            @endcan
+            <li class="{{ request()->routeIs('layouts.user.individual') ? 'nav-item active' : 'nav-item' }}">
+                <a class="nav-link" href="{{ route('layouts.user.individual') }}">
+                    <i class="fas fa-fw fa-receipt"></i>
+                    <span>Statistics Player</span>
+                </a>
+            </li>
+            @can('isadmin')
+            <li class="{{ request()->routeIs('health.create') ? 'nav-item active' : 'nav-item' }}">
+                <a class="nav-link" href="{{ route('health.create') }}">
+                    <i class="fas fa-fw fa-shield-alt"></i>
+                    <span>Health Create</span>
+                </a>
+            </li>
+            <li class="{{ request()->routeIs('layouts.health.index') ? 'nav-item active' : 'nav-item' }}">
+                <a class="nav-link" href="{{ route('layouts.health.index') }}">
+                    <i class="fas fa-fw fa-shield-alt"></i>
+                    <span>Health Assessment</span>
+                </a>
+            </li>
+            @endcan
+            <li class="{{ request()->routeIs('layouts.health.healthy') ? 'nav-item active' : 'nav-item' }}">
+                <a class="nav-link" href="{{ route('layouts.health.healthy') }}">
+                    <i class="fas fa-fw fa-shield-alt"></i>
+                    <span>Health & Physiotherapy</span>
+                </a>
+            </li>
             <li class="nav-item">
-                <a class="nav-link" href="schedules.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-calendar"></i>
                     <span>Jadwal Latihan & Pertandingan</span>
                 </a>
             </li>
+            @can('isadmin')
             <li class="nav-item">
-                <a class="nav-link" href="finance.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-coins"></i>
                     <span>Keuangan</span>
                 </a>
             </li>
+            @endcan
             <li class="nav-item">
-                <a class="nav-link" href="notifications.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-bell"></i>
                     <span>Notifikasi</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="settings.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-cogs"></i>
                     <span>Pengaturan</span>
                 </a>
@@ -121,7 +157,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administration</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
                                 <img class="img-profile rounded-circle"
                                     src="{{ asset('sb-admin/img/undraw_profile.svg') }}" alt="Profile Image">
                             </a>

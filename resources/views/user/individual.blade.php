@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,7 @@
         }
 
         .player-card {
-            background: rgba(48, 40, 86, 0.1);
+            background: rgb(56, 107, 200);
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
@@ -55,7 +58,7 @@
             margin: 0;
             font-size: 2.5rem;
             font-weight: 700;
-            color: #ffd700;
+            color: #4e73df;
         }
 
         .stat-card p {
@@ -68,7 +71,7 @@
             font-size: 1.8rem;
             text-transform: uppercase;
             font-weight: 700;
-            color: #ffd700;
+            color: #4e73df;
             margin-bottom: 15px;
         }
 
@@ -83,14 +86,14 @@
 
         .icon {
             font-size: 2rem;
-            color: #ffd700;
+            color: #4e73df;
         }
 
         .footer {
             text-align: center;
             margin-top: 20px;
             font-size: 0.9rem;
-            color: #bbb;
+            color: #4e73df;
         }
 
         .chart-container {
@@ -107,18 +110,18 @@
             max-height: 200px;
         }
         .btn-back-to-dashboard {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-        border-radius: 50px;
-        padding: 10px 20px;
-        font-size: 14px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-    .btn-back-to-dashboard:hover {
-        background-color: #e6b800; /* Warna lebih gelap saat hover */
-    }
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .btn-back-to-dashboard:hover {
+            background-color: #4e73df; /* Warna lebih gelap saat hover */
+        }
     </style>
 </head>
 <body>
@@ -238,9 +241,6 @@
         <div class="footer">
             &copy; MaguwoharjoFootballPark | Designed with <i class="fas fa-heart"></i> by MFPAcademy2024
         </div>
-        <a href="/user" class="btn-back-to-user btn btn-warning">
-            <i class="fas fa-arrow-left"></i> Kembali
-        </a>
     </div>
 
     <!-- Bootstrap JS -->
@@ -291,3 +291,4 @@
     </script>
 </body>
 </html>
+@endsection

@@ -1,4 +1,5 @@
 <!-- resources/views/layouts/layout.blade.php -->
+{{-- bukan tampilan apapun --}}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -67,8 +68,8 @@
             <li class="nav-items dropdown">
               <a href="#" class="nav-link">About Us</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{ url('/pelatih') }}">PELATIH MFP</a></li>
-                <li><a class="dropdown-item" href="{{ url('/pemain') }}">PEMAIN MFP</a></li>
+                <li><a class="dropdown-item" href="{{ url('#') }}">PELATIH MFP</a></li>
+                <li><a class="dropdown-item" href="{{ url('#') }}">PEMAIN MFP</a></li>
                 <li><a class="dropdown-item" href="#">SPONSORSHIP</a></li>
               </ul>
             </li>
@@ -97,7 +98,7 @@
               <a href="#" class="nav-link">Player Performance</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{{ url('/individual') }}">Individual Player Stats</a></li>
-                <li><a class="dropdown-item" href="#">Health & Physiotherapy</a></li>
+                <li><a class="dropdown-item" href="{{ url('/healthy') }}">Health & Physiotherapy</a></li>
               </ul>
             </li>
             <li class="nav-items dropdown">
@@ -118,12 +119,11 @@
         </nav>
 
         <div class="social-links d-flex me-4 justify-content-center align-items-center">
-          <a class="nav-link" href="./serach-items/serach.html" title="Click to Search"><i class="fas fa-search"></i></a>
           <a class="nav-link" href="https://www.youtube.com/channel/UCTFOYGV-nEZHfbIYAAGU-fw" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
           <a class="nav-link" href="https://www.instagram.com/maguwoharjofootball_park?igshid=YWVzeW9sN3RoZm41" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
           <!-- Nav Item - User Information -->
-          <li class="nav-item dropdown no-arrow" style="position: relative; top: -10px;">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+          <li class="nav-item dropdown no-arrow" style="position: relative;">
+            <a class="" href="#" id="userDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
                 <img class="img-profile rounded-circle" style="width: 30px; height: 30px;"
@@ -178,49 +178,6 @@
             </div>
         </header>
 
-
-        <!-- score cards -->
-        <div class="score-card-wrapper container-fluid px-5">
-            <div class="card">
-                <div class="card-body">
-                    <div class="img-score">
-                        <img src="{{ asset('page-imgs/white_races_logo_02.png') }}" alt="rece-logo" />
-                        <h6>MFP U-14</h6>
-                    </div>
-                    <div class="score-count">
-                        <span class="score-num" data-target="5">2</span>
-                        <span class="score-num" data-target="7">0</span>
-                    </div>
-                    <div class="img-score">
-                        <img src="{{ asset('page-imgs/white_races_logo_02.png') }}" alt="rece-logo" />
-                        <h6>MFP U-16</h6>
-                    </div>
-                </div>
-                <div class="btn-details text-center">
-                    <a href="#" class="btn-main">Hasil score</a>
-                </div>
-            </div>
-            <!-- score cards 2 -->
-            <div class="card">
-                <div class="card-body">
-                    <div class="img-score">
-                        <img src="{{ asset('page-imgs/white_races_logo_02.png') }}" alt="rece-logo" />
-                        <h6>MFP U-20</h6>
-                    </div>
-                    <div class="score-count">
-                        <span class="score-num" data-target="3">3</span>
-                        <span class="score-num" data-target="8">1</span>
-                    </div>
-                    <div class="img-score">
-                        <img src="{{ asset('page-imgs/white_races_logo_02.png') }}" alt="rece-logo" />
-                        <h6>MFP U-18</h6>
-                    </div>
-                </div>
-                <div class="details-btn text-center">
-                    <a href="#" class="btn-main">Hasil Score</a>
-                </div>
-            </div>
-        </div>
         <!-- club section -->
         <section class="club-sect" data-aos="">
             <div class="club-sect-inner">
@@ -243,7 +200,7 @@
 
                         <div class="club-btns mb-4">
                             <a href="#location-map" class="btn-main mb-3">our location</a>
-                            <a href="{{ url('/jadwal_latihan') }}" class="btn-main main-btn-2">Jadwal Latihan</a>
+                            <a href="{{ url('#') }}" class="btn-main main-btn-2">Jadwal Latihan</a>
                         </div>
                     </div>
 
@@ -292,11 +249,11 @@
         <!-- /about section -->
 
         <!-- Principles section -->
-        <section class="principles" data-aos="">
+        <section class="principles" >
             <div class="principle-headline pt-5">
                 <span class="text-uppercase">MFP ACADEMY</span>
                 <h3 class="text-uppercase">
-                    NE <span class="span-color fw-bolder">WS </span>
+                    NE<span class="span-color fw-bolder">WS </span>
                 </h3>
                 <p>
                     Kualitas: Menyediakan fasilitas dan layanan terbaik untuk pengalaman olahraga optimal.
@@ -307,7 +264,7 @@
                 </p>
             </div>
             <div class="principles-cards row pb-5">
-                <div class="col-lg-3 col-md-6 card" data-aos="fade-up" data-aos-delay="50">
+                <div class="col-lg-3 col-md-6 card" data-aos-delay="50">
                     <div class="pinciple-symbol">
                         <span class="btn-main bt-main-2 cards-symbols"><i class="fas fa-calculator"></i></span>
                     </div>
@@ -319,7 +276,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 card" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-3 col-md-6 card" data-aos-delay="200">
                     <div class="pinciple-symbol">
                         <span class="btn-main bt-main-2 cards-symbols"><i class="fas fa-futbol"></i></span>
                     </div>
@@ -331,7 +288,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 card" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-lg-3 col-md-6 card" data-aos-delay="300">
                     <div class="pinciple-symbol">
                         <span class="btn-main bt-main-2 cards-symbols"><i class="far fa-hand-rock"></i></span>
                     </div>
@@ -343,7 +300,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 card" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-lg-3 col-md-6 card" data-aos-delay="400">
                     <div class="pinciple-symbol">
                         <span class="btn-main bt-main-2 cards-symbols"><i class="fas fa-basketball-ball"></i></span>
                     </div>
@@ -370,7 +327,7 @@
         <!-- description cards -->
         <div class="desc-cards">
             <div class="container row">
-                <div class="card col-lg-3 col-md-12" data-aos="fade-up" data-aos-delay="50">
+                <div class="card col-lg-3 col-md-12" data-aos-delay="50">
                     <div class="card-icon pt-4">
                         <span class="btn-main main-btn-2"><i class="fas fa-volleyball-ball"></i></span>
                     </div>
@@ -382,7 +339,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-md-12 card-dark0" data-aos="fade-up" data-aos-delay="300">
+                <div class="card col-lg-3 col-md-12 card-dark0" data-aos-delay="300">
                     <div class="card-icon pt-4">
                         <span class="btn-main main-btn-2"><i class="fas fa-volleyball-ball"></i></span>
                     </div>
@@ -394,7 +351,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-md-12 card-dark1" data-aos="fade-up" data-aos-delay="400">
+                <div class="card col-lg-3 col-md-12 card-dark1" data-aos-delay="400">
                     <div class="card-icon pt-4">
                         <span class="btn-main main-btn-2"><i class="fas fa-volleyball-ball"></i></span>
                     </div>
@@ -405,7 +362,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-md-12 card-dark2" data-aos="fade-up" data-aos-delay="600">
+                <div class="card col-lg-3 col-md-12 card-dark2" data-aos-delay="600">
                     <div class="card-icon pt-4">
                         <span class="btn-main main-btn-2"><i class="fas fa-volleyball-ball"></i></span>
                     </div>

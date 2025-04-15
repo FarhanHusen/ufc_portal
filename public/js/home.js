@@ -240,3 +240,12 @@ var ssAOS = function () {
     });
 };
 ssAOS();
+
+// Contoh: Mengganti gambar profil saat diklik
+document.getElementById('profileDropdown').addEventListener('click', function() {
+    const profileImage = this.querySelector('img');
+    const newImage = prompt("Masukkan URL gambar profil baru:");
+    if (newImage) {
+      profileImage.src = newImage;
+    }
+  });

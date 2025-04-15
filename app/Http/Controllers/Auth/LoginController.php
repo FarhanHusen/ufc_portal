@@ -54,11 +54,14 @@ class LoginController extends Controller
         }
 
         // Jika pengguna biasa, arahkan ke halaman pengguna biasa
-        return redirect()->route('user.dashboard'); // Arahkan ke dashboard user
+        if ($user->role === 'user') {
+        return redirect()->route('admin.dashboard');// Arahkan ke dashboard user
+        }
     }
     public function logout()
     {
         Auth::logout();  // Logout user
         return redirect('/');  // Kembali ke halaman index setelah logout
     }
+    
 }

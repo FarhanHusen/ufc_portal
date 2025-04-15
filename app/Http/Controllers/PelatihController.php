@@ -10,6 +10,7 @@ class PelatihController extends Controller
     // Menampilkan halaman manajemen pelatih (form input dan daftar pelatih)
     public function index()
     {
+        $this->authorize('isadmin');
         $pelatih = Pelatih::all(); // Ambil semua data pelatih
         return view('layouts.admin.mpelatih', compact('pelatih'));
     }

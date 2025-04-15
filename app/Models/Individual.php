@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pemain extends Model
+class Individual extends Model
 {
     use HasFactory;
 
-    protected $table = 'pemain';
+    protected $table = 'individuals'; // Sesuaikan dengan nama tabel di database
+
     protected $fillable = [
         'name',
-        'position',
-        'description',
-        'photo',
+        'email',
+        'phone',
     ];
 }
