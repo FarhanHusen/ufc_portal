@@ -10,6 +10,7 @@ class PemainController extends Controller
     // Menampilkan halaman manajemen pemain (form input dan daftar pemain)
     public function index()
     {
+        $this->authorize('isadmin');
         $pemain = Pemain::all(); // Ambil semua data pemain
         return view('layouts.admin.mpemain', compact('pemain'));
     }

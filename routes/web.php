@@ -19,6 +19,15 @@ Route::get('/pemain', [PemainController::class, 'showpemain'])->name('pemain.sho
 Route::get('/jadwal_latihan', function () {
     return view('jadwal');
 });
+<<<<<<< HEAD
+=======
+Route::get('/individual', function () {
+    return view('layouts.user.individual');
+});
+
+Route::get('/pemain', [PemainController::class, 'pemain'])->name('pemain');
+
+>>>>>>> 9935194e4db3d48a006b20a683e31f59da94cba6
 // Rute untuk login (melalui route name)
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class, 'login']);

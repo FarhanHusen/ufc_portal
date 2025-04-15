@@ -62,7 +62,7 @@
         <nav class="nav-bar1">
           <ul>
             <li class="nav-items">
-                <a href="{{ url('/') }}" class="nav-link">Home</a>
+                <a href="{{ url('#') }}" class="nav-link">Home</a>
             </li>
             <li class="nav-items dropdown">
               <a href="#" class="nav-link">About Us</a>
@@ -96,7 +96,7 @@
             {{-- <li class="nav-items dropdown">
               <a href="#" class="nav-link">Player Performance</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Individual Player Stats</a></li>
+                <li><a class="dropdown-item" href="{{ url('/individual') }}">Individual Player Stats</a></li>
                 <li><a class="dropdown-item" href="#">Health & Physiotherapy</a></li>
               </ul>
             </li> --}}
